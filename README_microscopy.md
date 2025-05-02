@@ -26,7 +26,7 @@ This repository contains code for training and evaluating modified ResNet50 mode
 Install all dependencies via:
 
 ```bash
-pip install -r requirements.txt
+pip install -r smp_requirements.txt
 ```
 
 ## 🛠️ Dataset Structure
@@ -44,47 +44,6 @@ dataset/
 ```
 
 You can pass these directories via `--train_dir` and `--test_dir`.
-
-## 🚀 Example Usage
-
-### Train a Classifier
-```bash
-python train_classifier.py \
-  --model resnet_cbam \
-  --train_dir ./data/train \
-  --test_dir ./data/test \
-  --num_classes 4 \
-  --device cuda
-```
-
-### Train with Contrastive Loss
-```bash
-python train_contrastive.py \
-  --loss_function contrastive \
-  --loss_type dynamic \
-  --embedding_size 128 \
-  --train_dir ./data/train \
-  --test_dir ./data/test \
-  --num_classes 4
-```
-
-### Test with k-NN Evaluation
-```bash
-python test_model.py \
-  --eval_strategy knn \
-  --model resnet_cbam \
-  --weights_path ./models/best_model.pth \
-  --test_dir ./data/test \
-  --output_json results.json \
-  --num_classes 4
-```
-
-### Reassemble and Tint Tiled Predictions
-```bash
-python reconstruct_image.py \
-  --json results.json \
-  --blend_red_blue
-```
 
 ## ⚙️ Command-Line Arguments
 
@@ -144,6 +103,47 @@ Model predictions and metadata (image name, predicted class, etc.) are stored in
 - Tile-level reassembly
 - Visualization
 - Voting-based aggregation
+
+## 🚀 Example Usage
+
+### Train a Classifier
+```bash
+python train_classifier.py \
+  --model resnet_cbam \
+  --train_dir ./data/train \
+  --test_dir ./data/test \
+  --num_classes 4 \
+  --device cuda
+```
+
+### Train with Contrastive Loss
+```bash
+python train_contrastive.py \
+  --loss_function contrastive \
+  --loss_type dynamic \
+  --embedding_size 128 \
+  --train_dir ./data/train \
+  --test_dir ./data/test \
+  --num_classes 4
+```
+
+### Test with k-NN Evaluation
+```bash
+python test_model.py \
+  --eval_strategy knn \
+  --model resnet_cbam \
+  --weights_path ./models/best_model.pth \
+  --test_dir ./data/test \
+  --output_json results.json \
+  --num_classes 4
+```
+
+### Reassemble and Tint Tiled Predictions
+```bash
+python reconstruct_image.py \
+  --json results.json \
+  --blend_red_blue
+```
 
 ## 📄 License
 
