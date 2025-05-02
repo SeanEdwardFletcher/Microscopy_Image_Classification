@@ -1,7 +1,7 @@
 
-# 🧪 Microscopy Image Classification with Deep Embeddings
+# 🧪 Microscopy Image Classification
 
-This repository contains code for training and evaluating deep learning models on grayscale phase contrast microscopy images. It supports classification and contrastive learning using compact embeddings (e.g., 128D), enabling robust evaluation via k-nearest neighbors (k-NN) and tile-level voting aggregation for slide-level prediction.
+This repository contains code for training and evaluating modified ResNet50 models on grayscale phase contrast microscopy images. It supports both classification using a fully connected layer (len=4) and contrastive learning using compact embeddings (e.g., 128D), enabling robust evaluation via k-nearest neighbors (k-NN) and tile-level voting aggregation for slide-level prediction.
 
 ## 🔍 Key Features
 
