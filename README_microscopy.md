@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 🛠️ Dataset Structure
 
-Organize your dataset as follows:
+Organize your datasets (training/validation/test) as follows:
 
 ```
 dataset/
