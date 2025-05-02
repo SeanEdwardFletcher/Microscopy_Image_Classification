@@ -43,7 +43,7 @@ dataset/
   │   └── ...
 ```
 
-You can pass this directory via `--train_dir` and `--test_dir`.
+You can pass these directories via `--train_dir` and `--test_dir`.
 
 ## 🚀 Example Usage
 
